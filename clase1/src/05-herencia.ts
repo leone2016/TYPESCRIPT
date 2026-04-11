@@ -30,6 +30,26 @@ class MeseroModerno extends MeseroBasico{
     }
 }
 
+
+class Barista extends MeseroBasico{
+    lastName: string;
+    constructor(name: string, lastName: string) {
+        super(name);
+        this.lastName = lastName;
+
+    }
+    servirCapuccino(){
+        console.log("preparar cafe con leche");
+    }
+
+    print(){
+        
+        console.log(` name: ${this.name}, lastName: ${this.lastName}`);
+    }
+    
+    
+}
+
 console.log("============ Mesero Basico ============")
 const meseroBasico = new MeseroBasico("Carlo Antonio");
 meseroBasico.servirCafeAmericano();
